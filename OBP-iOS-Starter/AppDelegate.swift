@@ -7,15 +7,35 @@
 //
 
 import UIKit
+import OBPKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+
+		let serverBase = "https://apisandbox.openbankproject.com/obp/v3.0.0/"
+		var serverInfo = OBPServerInfo.firstEntry(forAPIServer: serverBase)
+		if  serverInfo == nil {
+			serverInfo = OBPServerInfo.addEntry(forAPIServer: serverBase)
+			serverInfo?.accessData = [
+				// ••• Substitute Your App Credentials Here (obtain from <server>/consumer-registration) •••
+				// (don't store credentials this way in production)
+				OBPServerInfo_APIBase			:	serverBase,
+				OBPServerInfo_AuthServerBase	:	"https://apisandbox.openbankproject.com/",
+				OBPServerInfo_ClientKey			:	"5d3cgan1likch0zormp1hn400gjm3ofmrjwasqu1", // aka Consumer Key
+				OBPServerInfo_ClientSecret		:	"yimcqxhwb04tq4mxbnotwjeckjz4zd2f24ploz3f", // aka Consumer Secret
+			]
+		}
+		if  let si = serverInfo, let session = OBPSession(serverInfo: si) {
+			OBPSession.setCurrent(session)
+			// uncomment following to use direct login; default is OAuth; both are easy - heavy lifting is done for you.
+			// session.authMethod = .directLogin
+		}
+
 		return true
 	}
 
