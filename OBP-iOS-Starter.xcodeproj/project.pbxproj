@@ -13,31 +13,10 @@
 		AEFE3CAB1EEA93D700ACC236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEFE3CAA1EEA93D700ACC236 /* Assets.xcassets */; };
 		AEFE3CAE1EEA93D700ACC236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFE3CAC1EEA93D700ACC236 /* LaunchScreen.storyboard */; };
 		AEFE3CB61EEA98F100ACC236 /* OBPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFE3CB51EEA98F100ACC236 /* OBPKit.framework */; };
-		AEFE3CB71EEA98F100ACC236 /* OBPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEFE3CB51EEA98F100ACC236 /* OBPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AEFE3CBA1EEA98FA00ACC236 /* STHTTPRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFE3CB91EEA98FA00ACC236 /* STHTTPRequest.framework */; };
-		AEFE3CBB1EEA98FA00ACC236 /* STHTTPRequest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEFE3CB91EEA98FA00ACC236 /* STHTTPRequest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AEFE3CBD1EEA98FF00ACC236 /* UICKeyChainStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFE3CBC1EEA98FF00ACC236 /* UICKeyChainStore.framework */; };
-		AEFE3CBE1EEA98FF00ACC236 /* UICKeyChainStore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEFE3CBC1EEA98FF00ACC236 /* UICKeyChainStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AEFE3CC01EEA994E00ACC236 /* OAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFE3CBF1EEA994E00ACC236 /* OAuthCore.framework */; };
-		AEFE3CC11EEA994E00ACC236 /* OAuthCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEFE3CBF1EEA994E00ACC236 /* OAuthCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		AEFE3CB81EEA98F100ACC236 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				AEFE3CBE1EEA98FF00ACC236 /* UICKeyChainStore.framework in Embed Frameworks */,
-				AEFE3CC11EEA994E00ACC236 /* OAuthCore.framework in Embed Frameworks */,
-				AEFE3CB71EEA98F100ACC236 /* OBPKit.framework in Embed Frameworks */,
-				AEFE3CBB1EEA98FA00ACC236 /* STHTTPRequest.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AEFE3CA01EEA93D700ACC236 /* OBP-iOS-Starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OBP-iOS-Starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,7 +98,6 @@
 				AEFE3C9C1EEA93D700ACC236 /* Sources */,
 				AEFE3C9D1EEA93D700ACC236 /* Frameworks */,
 				AEFE3C9E1EEA93D700ACC236 /* Resources */,
-				AEFE3CB81EEA98F100ACC236 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
