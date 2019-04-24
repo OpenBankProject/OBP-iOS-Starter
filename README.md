@@ -19,11 +19,17 @@ A minimal functioning iOS starter app to copy and modify, that demonstrates log-
 		```
 
 1.	Replace the credentials in `AppDelegate.swift` with those you obtain from the Get API Key link at the OBP server you are using.
+	1.	Rename. Decide on your app name, then in the project file change the project and target names from OBP-iOS-Starter to _Your-App-Name_ and the bundle id from com.tesobe.OBP-iOS-Starter to _your.reverse.domain_._Your-App-Name_
+	![Where to adjust app name and bundle id](img/adjust-app-name.png)
+	1.	Make a note of the default redirect URL you will need when registering your app as an API consumer. If you followed the previous step literally, it would be `x-your.reverse.domain.your-app-name://callback`, i.e. the scheme is the lowercased bundle id, prefixed with `x-` — more on this at [callback schemes][OBPKit-Callback-Schemes]. It's important to get this right, as it is verified as part of OAuth handshake; making a mistake here is a common cause of getting _401 unauthorised_ responses.
+	1.	Register your app by following the Get API Key link at the OBP server you are using, and using the redirect URL from the previous step. Save the registration result page as a PDF and retain — you will need it if you want to change the redirect URL at some future point.
+	1.	In `AppDelegate.swift` update the key and secret to yours, and update the server URLs if necessary.
 
 
 
 [OBP]: http://www.openbankproject.com
 [OBPKit]: https://github.com/OpenBankProject/OBPKit-iOSX
+[OBPKit-Callback-Schemes]: https://github.com/OpenBankProject/OBPKit-iOSX#callback-schemes
 [API]: https://github.com/OpenBankProject/OBP-API/wiki
 [DirectLogin]: https://github.com/OpenBankProject/OBP-API/wiki/Direct-Login
 [HelloOBP-iOS]: https://github.com/OpenBankProject/Hello-OBP-OAuth1.0a-IOS
